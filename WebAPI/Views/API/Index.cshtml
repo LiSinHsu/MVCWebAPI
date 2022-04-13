@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebAPI.Models.DisbursedAmt>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>109年替代役役男贍養金發放統計表</h2>
+<div><table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.disbursed_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.disbursed_amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remarks)
+        </th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+     <tr>
+         <td>
+             @Html.DisplayFor(modelItem => item.Month)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.disbursed_number)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.disbursed_amount)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.remarks)
+         </td>
+     </tr>
+            }
+    </table>
+</div>
+
